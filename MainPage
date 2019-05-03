@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <title>Home Page</title>
+    </head>
+    <style>
+        #submitScreen {
+            display:none;
+        }
+        #results {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        #intro {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div id="mainScreen">
+            <h1>League Finder</h1>
+                <p id="intro">League Finder is made for finding your child a sports league that will perfectly suite them. Answer these few questions then League Finder will do the rest.</p>
+            <div id="sport">Choose your child's desired sport.</div>
+                <form>
+                    <select name="sports">
+                        <option value="choose">-Choose Sport-</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="baseball">Baseball / Softball</option>
+                        <option value="football">Football / Flag Football</option>
+                        <option value="soccer">Soccer</option>
+                        <option value="volleyball">Volleyball</option>
+                    </select>
+                </form>
+            <div id="age">How old is your child?</div>
+                <form>
+                    <select name="ageRange">
+                        <option value="choose">-Choose Age-</option>
+                        <option value="u7">Under 7</option>
+                        <option value="78">7 to 8</option>
+                        <option value="910">9 to 10</option>
+                        <option value="1112">11 to 12</option>
+                        <option value="1314">13 to 14</option>
+                        <option value="1516">15 to 16</option>
+                        <option value="u19">Under 19</option>
+                    </select>
+                </form>
+            <div id="gender">What kind of League do you wish your child to participate in?</div>
+                <form>
+                    <select name="gender">
+                        <option value="choose">-Choose Gender-</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="coed">Co-ed</option>
+                    </select>
+                </form>
+            <div id="skill">What skill level does your child wish to participate in?</div>
+                <form>
+                    <select name="skillLevel">
+                        <option value="choose">-Choose Skill Level-</option>
+                        <option value="aau">AAU / Travel</option>
+                        <option value="competitive">Competititve</option>
+                        <option value="skilledRec">Skilled Recreational</option>
+                        <option value="beginnerRec">Beginner Recreational</option>
+                    </select>
+                </form>
+            <div id="pay">How much are you willing to pay for this league?</div>
+                <form>
+                    <select name="payment">
+                        <option value="choose">-Choose Price-</option>
+                        <option value="u100">Under $100</option>
+                        <option value="100149">$100 to $149</option>
+                        <option value="150199">$150 to $199</option>
+                        <option value="200250">$200 to $249</option>
+                        <option value="o250">Over $250</option>
+                    </select>
+                </form>
+            <div id="area">Where do you live?</div>
+                <form>
+                    City:
+                    <input type="text" name="city">
+                    <br>
+                    State:
+                        <input type="text" name="state">
+                    <br>
+                    Zip Code:
+                    <input type="text" name="zip">
+                </form>
+            <button id="submitButton">Submit</button>
+        </div>
+        <div id="submitScreen">
+            <main>
+                <h1>Results</h1>
+                <p id="results">League founder has found the perfect leagues for you!</p>
+                <p><a href="https://sportsofallsortsky.com/our-next-league-registration-information">Sports of All Sorts</a> - Florence, Ky - Under 15, Skilled Recreatoinal, $120.00, registration deadline 6/2, starts 6/10</p>
+            </main>
+        </div>
+        <script>
+            var myMainScreen;
+            myMainScreen = document.querySelector("#mainScreen");
+            
+            var mySubmitScreen;
+            mySubmitScreen = document.querySelector("#submitScreen");
+            
+            var mySubmitButton;
+            mySubmitButton = document.querySelector("#submitButton")
+            
+            mySubmitButton.addEventListener("click", hideMainShowSubmit, false);
+            function hideMainShowSubmit() {
+                myMainScreen.style.display = "none";
+                mySubmitScreen.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
